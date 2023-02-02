@@ -2,7 +2,7 @@
 
 This shell script is designed to simplify the task of deploying changes to multiple Git repositories. The script scans the current directory for all Git repositories and performs a git operations on each one.
 
-Sometimes after working on multiple repositories, I want to push all the work I've done and this is a better way i found to do it.
+Sometimes after working on multiple repositories, I want to push all the work I've done and this is a better way I found to do it.
 
 **NOTICE**: It's ok to use it in personal projects where the commit message doesn't matter and there's no danger in pushing files that aren't well configured in .gitignore.
 So if you have a more formal project or a work project, it is advisable to conventionally run the git commands manually for each directory.
