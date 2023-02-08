@@ -6,15 +6,21 @@ do
     # Go to the repository directory
     cd "${repo%/*}"
 
-    # Stage changes
-    git add .
+    echo "Checking repository: $(pwd)" 
 
-    # Commit changes
-    git commit -m "commited with git-all-repos"
+    # Add try-except block to check for .git repository
+    if [ -d .git ]; then
 
-    # Push changes
-    git push origin HEAD
+        # Stage changes
+        git add .
+        # Commit changes
+        git commit -m "commited with git-all-repos"
+        # Push changes
+        git push origin HEAD
 
-    # Go back to the previous directory
+    else
+        echo "Not a Git repository, skipping..."
+    fi
+
     cd -
 done
