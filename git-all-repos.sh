@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# build executable before running script
+
 # Find all git repositories
 find . -name ".git" | while read repo;
 do
