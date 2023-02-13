@@ -20,10 +20,10 @@ do
         # Push changes
         git push
 
-    echo "Files commited!"
+    echo ">>>>> Files commited!"
     
     else
-        echo "Not a Git repository, skipping..."
+        echo ">>>>> Not a Git repository, skipping..."
     fi
 
     cd -
