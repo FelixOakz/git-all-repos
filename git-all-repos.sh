@@ -7,8 +7,8 @@ find . -name ".git" | while read repo;
 do
     # Go to the repository directory
     cd "${repo%/*}"
-
-    echo "Checking repository: $(pwd)" 
+    
+    echo ">>>>> Checking repository: $(pwd)" 
 
     # Add try-except block to check for .git repository
     if [ -d .git ]; then
@@ -18,8 +18,10 @@ do
         # Commit changes
         git commit -m "commited with git-all-repos"
         # Push changes
-        git push origin HEAD
+        git push
 
+    echo "Files commited!"
+    
     else
         echo "Not a Git repository, skipping..."
     fi
